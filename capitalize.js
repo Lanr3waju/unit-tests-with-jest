@@ -1,7 +1,26 @@
-const capitalize = str => {
-  const letter = str.charAt(0).toUpperCase();
-  const capitalizedStr = str.replace(str.charAt(0), letter);
-  return capitalizedStr;
+const capitalize = () => {
+  const checkStringCapitalization = (originalInput, capitalizedInput) => {
+    if (originalInput === capitalizedInput) {
+      return true;
+    }
+  };
+  const capitalizeStr = (str) => {
+    if (typeof str === "string") {
+      const inpString = str;
+      const capitalChar = inpString.charAt(0).toUpperCase();
+      const firstChar = inpString.charAt(0);
+      const capitalizedStr = inpString.replace(firstChar, capitalChar);
+
+      if (!checkStringCapitalization(inpString, capitalizedStr)) {
+        return capitalizedStr;
+      }
+    }
+  };
+
+  return {
+    checkStringCapitalization,
+    capitalizeStr,
+  }
 };
 
 module.exports = capitalize;
