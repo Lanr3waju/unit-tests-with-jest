@@ -1,9 +1,7 @@
 const calculator = () => {
-  checkIfInputIsANumber = (a, b) => {
+  const checkIfInputIsANumber = (a, b) => {
     if (typeof a === "number" && typeof b === "number") {
       return true;
-    } else {
-      return NaN;
     }
   };
 
@@ -32,7 +30,6 @@ const calculator = () => {
   };
 
   return {
-    checkIfInputIsANumber,
     add,
     subtract,
     divide,

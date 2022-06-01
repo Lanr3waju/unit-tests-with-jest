@@ -35,11 +35,3 @@ test('calculator addition', () => {
     expect(calculate.multiply('23', '33')).toBe(undefined);
     expect(calculate.multiply('one', 'two')).toBe(undefined);
   });
-
-  test('calculator should only accept numbers', () => {
-    expect(calculate.checkIfInputIsANumber(2, 1)).toBe(true);
-    expect(calculate.checkIfInputIsANumber(-2, -1)).toBe(true);
-    expect(calculate.checkIfInputIsANumber(0.22, 1.345)).toBe(true);
-    expect(calculate.checkIfInputIsANumber('one', 'Two')).toBe(NaN);
-    expect(calculate.checkIfInputIsANumber('1', '2')).toBe(NaN);
-  });
