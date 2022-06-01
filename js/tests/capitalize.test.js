@@ -1,4 +1,4 @@
-const capitalize = require('./capitalize');
+const capitalize = require('../capitalize');
 
 const capitalizeString = capitalize();
 test('capitalize first string', () => {
