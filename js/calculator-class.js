@@ -6,6 +6,13 @@ class Calculator {
       }
       return false;
     };
+
+    this.checkIfDivisorIsNotZero = denominator => {
+      if (denominator !== 0) {
+        return true;
+      }
+      return false;
+    };
   }
 
   add = (a, b) => {
@@ -31,7 +38,10 @@ class Calculator {
 
   divide = (a, b) => {
     if (this.checkIfInputIsANumber(a, b)) {
-      return a / b;
+      if (this.checkIfDivisorIsNotZero(b)) {
+        return a / b;
+      }
+      throw new Error('Denominator must  be greater than zero!');
     }
     return undefined;
   };

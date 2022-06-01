@@ -22,3 +22,7 @@ test('division of strings, should return undefined', () => {
   expect(calculate.divide('23', '33')).toBe(undefined);
   expect(calculate.divide('one', 'two')).toBe(undefined);
 });
+
+test('divisor / denominator must be greater than 0 (zero)', () => {
+  expect(() => calculate.divide(5, 0)).toThrow();
+});

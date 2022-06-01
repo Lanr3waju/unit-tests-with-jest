@@ -22,3 +22,7 @@ test('division of strings, should return NaN (Not a Number)', () => {
   expect(calculate.divide('23', '33')).toBe(NaN);
   expect(calculate.divide('one', 'two')).toBe(NaN);
 });
+
+test('divisor / denominator must be greater than 0 (zero)', () => {
+  expect(() => calculate.divide(5, 0)).toThrow();
+});

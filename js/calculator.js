@@ -6,6 +6,13 @@ const calculator = () => {
     return false;
   };
 
+  const checkIfDivisorIsNotZero = denominator => {
+    if (denominator !== 0) {
+      return true;
+    }
+    return false;
+  };
+
   const add = (a, b) => {
     if (checkIfInputIsANumber(a, b)) {
       return a + b;
@@ -29,7 +36,10 @@ const calculator = () => {
 
   const divide = (a, b) => {
     if (checkIfInputIsANumber(a, b)) {
-      return a / b;
+      if (checkIfDivisorIsNotZero(b)) {
+        return a / b;
+      }
+      throw new Error('Denominator must  be greater than zero!');
     }
     return NaN;
   };
