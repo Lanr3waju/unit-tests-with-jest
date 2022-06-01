@@ -3,9 +3,10 @@ const capitalize = () => {
     if (originalInput === capitalizedInput) {
       return true;
     }
+    return false;
   };
-  const capitalizeStr = (str) => {
-    if (typeof str === "string") {
+  const capitalizeStr = str => {
+    if (typeof str === 'string') {
       const inpString = str;
       const capitalChar = inpString.charAt(0).toUpperCase();
       const firstChar = inpString.charAt(0);
@@ -14,13 +15,15 @@ const capitalize = () => {
       if (!checkStringCapitalization(inpString, capitalizedStr)) {
         return capitalizedStr;
       }
+      return false;
     }
+    return undefined;
   };
 
   return {
     checkStringCapitalization,
     capitalizeStr,
-  }
+  };
 };
 
 module.exports = capitalize;

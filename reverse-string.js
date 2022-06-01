@@ -1,10 +1,9 @@
 const reverseString = (str) => {
-  if (typeof str === "string") {
-    let newStr = str.split("").reverse().join("");
+  if (typeof str === 'string') {
+    const newStr = str.split('').reverse().join('');
     return newStr;
-  } else {
-      return undefined;
   }
+  return false;
 };
 
 module.exports = reverseString;
