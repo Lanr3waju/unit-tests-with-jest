@@ -37,5 +37,4 @@ class Calculator {
   };
 }
 
-const calc = new Calculator();
-console.log(calc.add(25, 25));
+module.exports = Calculator;
